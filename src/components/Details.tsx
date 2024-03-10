@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
+import { UserType } from "./User";
 const USER_URL = "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/";
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-
-type User = {
-  id: number,
-  name: string,
-}
 
 type userData = {
   id: number,
@@ -20,7 +16,7 @@ type userData = {
 }
 
 type detailsProps = {
-  user: User | undefined,
+  user: UserType | undefined,
 }
 
 const Details = (props: detailsProps) => {
